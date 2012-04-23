@@ -1,0 +1,11 @@
+extends layout
+
+block main_content
+  article#main_container
+    h1#title_display <span>#{user}'s</span> book profile
+    ul#books
+    
+block scripts
+    script
+      var user = "#{user}";
+    script(type='text/javascript', src='/javascripts/profile.js')

@@ -41,11 +41,12 @@ create table Books(
 ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 create table Descriptions(
-       id               MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
-       user_id          MEDIUMINT UNSIGNED NOT NULL,
-       book_id          MEDIUMINT UNSIGNED NOT NULL,
-       desc_text        TEXT NOT NULL DEFAULT '',
-       image_url        VARCHAR(2083) NOT NULL DEFAULT '',
+       id                MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+       user_id           MEDIUMINT UNSIGNED NOT NULL,
+       book_id           MEDIUMINT UNSIGNED NOT NULL,
+       desc_text         TEXT NOT NULL DEFAULT '',
+       image_url         VARCHAR(2083) NOT NULL DEFAULT '',
+       datetime_modified TIMESTAMP NOT NULL,
    
        PRIMARY KEY(id),
        KEY users_book_desc(user_id, book_id),

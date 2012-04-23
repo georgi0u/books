@@ -35,6 +35,8 @@ db.auth("books", "georga5");
 
 // Routes
 app.get('/', routes.index);
+app.get(/\/u\/(.*?)\/?$/, routes.profile);
+//app.get(/\/u\/(.*?)\/\d+\/?$/, routes.specificDescription);
 app.get('/user_descriptions/', routes.getUserDescriptions);
 
 // Start 'er up
